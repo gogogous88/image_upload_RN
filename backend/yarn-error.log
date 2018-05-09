@@ -1,0 +1,47 @@
+Arguments: 
+  /Users/gogogous88hotmail.com/.nvm/versions/node/v8.1.1/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js
+
+PATH: 
+  /opt/local/bin:/Users/gogogous88hotmail.com/.nvm/versions/node/v8.1.1/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.1.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "file-upload-example-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "aws-sdk": "^2.7.13",
+      "dotenv": "^2.0.0",
+      "express": "^4.14.0",
+      "multer": "^1.2.0",
+      "multer-s3": "^2.5.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.224.1.tgz: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:133094:19)
+      at ontimeout (timers.js:488:11)
+      at tryOnTimeout (timers.js:323:5)
+      at Timer.listOnTimeout (timers.js:283:5)
