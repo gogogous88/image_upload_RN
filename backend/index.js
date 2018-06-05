@@ -3,6 +3,7 @@
 const aws = require("aws-sdk");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
+const path = require('path');
 
 const s3 = new aws.S3({
   accessKeyId: "AKIAI64GB7F3PVCA746A",
@@ -59,5 +60,8 @@ app.post("/upload_galary", uploadGalary.single("photo"), (req, res, next) => {
 require("./myJsonFile")(app);
 
 app.get("/", (req, res) => res.send("Hello World!"));
+
+const publicPath = path.resolve(__dirname,'../public');
+app.use(express.static(publicPath));
 
 app.listen(5000, () => console.log("Example app listening on port 5000!"));
