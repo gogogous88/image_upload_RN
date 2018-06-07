@@ -8,6 +8,11 @@ const keys = require("./keys");
 
 const s3 = new aws.S3(keys);
 
+//config your keys.js
+// {accessKeyId: "*************",
+//   secretAccessKey: "*****************",
+//   region: "*********}
+
 // Initialize multers3 with our s3 config and other options
 const upload = multer({
   storage: multerS3({
