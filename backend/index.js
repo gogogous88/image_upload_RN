@@ -3,13 +3,10 @@
 const aws = require("aws-sdk");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
-const path = require('path');
+const path = require("path");
+const keys = require("./keys");
 
-const s3 = new aws.S3({
-  accessKeyId: "AKIAI64GB7F3PVCA746A",
-  secretAccessKey: "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",
-  region: "us-east-2"
-});
+const s3 = new aws.S3(keys);
 
 // Initialize multers3 with our s3 config and other options
 const upload = multer({
@@ -61,7 +58,7 @@ require("./myJsonFile")(app);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
-const publicPath = path.resolve(__dirname,'../public');
+const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 
 app.listen(5000, () => console.log("Example app listening on port 5000!"));
